@@ -32,15 +32,12 @@
           <h5 class="col-lg-3">Rating</h5>
           <div class="col-lg-9">{{movie.vote_average}}</div>
         </div>
-        <!-- ADDED -->
-        <div class="row row spacing">
-          <h5 class="col-lg-3">Trailer</h5>
-          <div class="col-lg-9">
-            <a href="https://www.youtube.com/watch?v={{results.key}}" *ngFor='let results of video.results' class="" target="_blank">{{results.name}}<br></a>
-          </div>
+		   <div class="row row spacing">
+          <h5 class="col-lg-3">Rating</h5>
+          <div class="col-lg-9">{{movie.vote_average}}</div>
         </div>
 
-      </div>
+ 
 
     </div>
   </div>
@@ -49,6 +46,12 @@
       <button class="btn btn-outline-secondary"
               style='width: 80px'
               [routerLink]="['/home']"> Back
-</button>
+			  
+		</button>
+</div>
+<div class="card-footer">
+	<app-like [movieId]='movie?.id' [movieLiked]="checkLiked(movie)"></app-like>
+
+
   </div>
 </div>
