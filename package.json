@@ -29,11 +29,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
     "ngx-owl-carousel-o": "^2.0.1",
-<<<<<<< HEAD
     "ngx-webstorage-service": "^4.1.0",
-=======
     "ngx-youtube-player": "^9.1.0",
->>>>>>> 21b13d2e0fb42eab6a30a16d882e9ec0fcb31f12
     "rxjs": "~6.4.0",
     "serialize-javascript": "^2.1.2",
     "tslib": "^1.10.0",
