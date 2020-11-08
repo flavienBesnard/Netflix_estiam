@@ -19,6 +19,10 @@ import { AddHeaderInterceptor } from './http-interceptors/add-header.interceptor
 import { LogResponseInterceptor } from './http-interceptors/log-response.interceptor';
 import { CacheInterceptor } from './http-interceptors/cache.interceptor';
 import { Err404Component } from './err404/err404.component';
+import { LikeComponent } from './movi-details/like.component'; // flavien	
+import { FavouriteComponent } from './movi-details/favourite.component'; // flavien	
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { Err404Component } from './err404/err404.component';
     CarouselHolderComponent,
     MoviDetailsComponent,
     MovieSearchComponent,
-    Err404Component
+    Err404Component,
+	 LikeComponent, // flavien	
+    FavouriteComponent // flavien	
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,7 @@ import { Err404Component } from './err404/err404.component';
     FontAwesomeModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
+    NgxYoutubePlayerModule
   ],
   providers: [
     MoviesService,

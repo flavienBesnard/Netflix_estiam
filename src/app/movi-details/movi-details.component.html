@@ -32,6 +32,11 @@
           <h5 class="col-lg-3">Rating</h5>
           <div class="col-lg-9">{{movie.vote_average}}</div>
         </div>
+
+		   <div class="row row spacing">
+          <h5 class="col-lg-3">Rating</h5>
+          <div class="col-lg-9">{{movie.vote_average}}</div>
+		  </div>
         <!-- ADDED -->
         <div class="row row spacing" *ngFor='let results of video.results; index as indexOfelement;'>
           <h5 class="col-lg-3">Trailer {{ indexOfelement+1 }}</h5>
@@ -43,16 +48,24 @@
             <iframe [src]="getEmbedUrl(results.key)" width="560" height="315" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+
         </div>
       </div>
 
-    </div>
   </div>
 
   <div class="card-footer">
       <button class="btn btn-outline-secondary"
               style='width: 80px'
               [routerLink]="['/home']"> Back
-</button>
+			  
+		</button>
+</div>
+<div class="card-footer">
+	<app-like [movieId]='movie?.id' [movieLiked]="checkLiked(movie)"></app-like>
+
+
   </div>
+</div>
+</div>
 </div>

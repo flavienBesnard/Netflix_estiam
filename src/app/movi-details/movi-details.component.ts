@@ -11,17 +11,15 @@ import { DomSanitizer } from '@angular/platform-browser'
 
 export class MoviDetailsComponent implements OnInit {
 
+  favouriteMovies;
   movie: SingleMovie;
-  // added
-  video: Video;
   imageBaseUrl = 'https://image.tmdb.org/t/p/original';
   constructor( private sanitizer: DomSanitizer, private movieService: MoviesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     const movieId: number = +this.route.snapshot.params.id;
-    this.movieService.getMovie(movieId).subscribe(res => this.movie = res);
-    // added
-    this.movieService.getVideo(movieId).subscribe(res => this.video = res);
+    this.movieService.getMovie(movieId)
+      .subscribe(res => this.movie = res);
   }
   getUrl(key){
     return 'https://www.youtube.com/watch?v=' + key;
