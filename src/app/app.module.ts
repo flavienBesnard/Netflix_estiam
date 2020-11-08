@@ -21,6 +21,8 @@ import { CacheInterceptor } from './http-interceptors/cache.interceptor';
 import { Err404Component } from './err404/err404.component';
 import { LikeComponent } from './movi-details/like.component'; // flavien	
 import { FavouriteComponent } from './movi-details/favourite.component'; // flavien	
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { FavouriteComponent } from './movi-details/favourite.component'; // flav
     FontAwesomeModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
+    NgxYoutubePlayerModule
   ],
   providers: [
     MoviesService,
