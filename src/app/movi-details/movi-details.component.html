@@ -35,8 +35,9 @@
         <!-- ADDED -->
         <div class="row row spacing">
           <h5 class="col-lg-3">Trailer</h5>
-          <div class="col-lg-9">
-            <a href="https://www.youtube.com/watch?v={{results.key}}" *ngFor='let results of video.results' class="" target="_blank">{{results.name}}<br></a>
+          <div class="col-lg-12" *ngFor='let results of video.results'>
+            <a href="https://www.youtube.com/watch?v={{results.key}}" target="_blank">{{results.name}}</a>
+            <youtube-player videoId="{{results.key}}" [height]="250" [width]="500"></youtube-player>
           </div>
         </div>
 

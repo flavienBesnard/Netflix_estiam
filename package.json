@@ -28,6 +28,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
     "ngx-owl-carousel-o": "^2.0.1",
+    "ngx-youtube-player": "^9.1.0",
     "rxjs": "~6.4.0",
     "serialize-javascript": "^2.1.2",
     "tslib": "^1.10.0",

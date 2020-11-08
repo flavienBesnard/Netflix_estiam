@@ -19,6 +19,7 @@ import { AddHeaderInterceptor } from './http-interceptors/add-header.interceptor
 import { LogResponseInterceptor } from './http-interceptors/log-response.interceptor';
 import { CacheInterceptor } from './http-interceptors/cache.interceptor';
 import { Err404Component } from './err404/err404.component';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { Err404Component } from './err404/err404.component';
     FontAwesomeModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
+    NgxYoutubePlayerModule
   ],
   providers: [
     MoviesService,
