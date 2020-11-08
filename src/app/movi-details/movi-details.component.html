@@ -33,13 +33,17 @@
           <div class="col-lg-9">{{movie.vote_average}}</div>
         </div>
         <!-- ADDED -->
-        <div class="row row spacing">
-          <h5 class="col-lg-3">Trailer</h5>
-          <div class="col-lg-9">
-            <a href="https://www.youtube.com/watch?v={{results.key}}" *ngFor='let results of video.results' class="" target="_blank">{{results.name}}<br></a>
+        <div class="row row spacing" *ngFor='let results of video.results; index as indexOfelement;'>
+          <h5 class="col-lg-3">Trailer {{ indexOfelement+1 }}</h5>
+          <div class="col-lg-9" >
+            <p>
+              <a href="https://www.youtube.com/watch?v={{results.key}}">{{ results.name }} </a>
+            </p>
+            <br>
+            <iframe [src]="getEmbedUrl(results.key)" width="560" height="315" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-
       </div>
 
     </div>
