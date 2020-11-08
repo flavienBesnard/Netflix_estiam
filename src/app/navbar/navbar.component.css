@@ -1,0 +1,20 @@
+nav{
+  background: black!important;
+}
+.logo{
+  font-weight:bold;
+  font-size: 35px;
+  color: rgb(216, 31, 38);
+  margin-right: 70px;
+}
+
+li > a.active {
+  color: rgb(216, 31, 38);
+}
+
+@media(max-width:768px){
+   .dropdown, .bell-icon{
+    display: none;
+  }
+}
+
